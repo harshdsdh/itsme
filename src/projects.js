@@ -21,6 +21,17 @@ function ProjectContent(props) {
     <div>
       <ul className="projlist">
         <li>
+          Designed my{" "}
+          <a
+            href="https://harshdsdh.github.io/itsme/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Portfolio
+          </a>{" "}
+          in React.
+        </li>
+        <li>
           Developed a MERN stack{" "}
           <a
             href="https://harshdsdh.github.io/my-app/"
