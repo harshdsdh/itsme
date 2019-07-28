@@ -1,13 +1,130 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.appheader {
+  grid-area: appheader;
+}
+.content {
+  grid-area: content;
+}
+.footer {
+  grid-area: footer;
+}
+.projects {
+  grid-area: projects;
+  background: #f5f5f5;
+  border: 1px solid #f00;
+}
+section {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
+  grid-template-areas:
+    "appheader"
+    "content"
+    "projects"
+    "footer";
+  grid-template-rows: 0.5fr auto auto 0.5fr;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.mainHeader {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  align-items: center;
+  padding: 0px 10px;
+  font-family: "Josefin Sans", sans-serif;
+  background: rgb(29, 28, 28);
+  color: rgb(253, 250, 250);
 }
+.mainHeader ul {
+  display: flex;
+  list-style: none;
+}
+.mainHeader ul li {
+  margin-left: 15px;
+}
+
+.link a {
+  text-decoration: none;
+  color: rgb(253, 250, 250);
+}
+.link a:hover {
+  color: #f00;
+}
+.mainContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333131;
+}
+.contentSection {
+  text-align: center;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5em;
+  background: #5c5c5c;
+  border: 1px solid #f00;
+  padding: 0px 15px;
+  margin: 15% 0%;
+}
+.contentFirstLine {
+  font-weight: bold;
+  color: rgb(253, 250, 250);
+}
+.arrowlink {
+  align-self: flex-end;
+}
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #f00;
+  background: #333131;
+}
+.Footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Josefin Sans", sans-serif;
+  background: rgb(29, 28, 28);
+  color: rgb(253, 250, 250);
+}
+.footerLinks {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  padding: 0px 0px;
+}
+.footerLinks li img {
+  padding: 0px 5px;
+}
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.project-title {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+}
+.codepen {
+  height: 265px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid;
+  margin: 1em 0;
+  padding: 1em;
+}
+.projectcontent {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+/*
+
+#321b6c*/
