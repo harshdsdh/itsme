@@ -1,8 +1,12 @@
 import React from "react";
 const Projects = () => {
   return (
-    <div className="projects" id="projects">
-      <ProjectsHeading heading="Projects" />
+    <div
+      className="projects aos-init aos-animate"
+      data-aos="fade-up"
+      id="projects"
+    >
+      <ProjectsHeading heading="Work" />
       <div className="projectcontent">
         <ProjectContent num="1" />
       </div>
