@@ -11,7 +11,7 @@ app.use(
     extended: false
   })
 );
-app.post("/", (req, res) => {
+app.post("/itsme", (req, res) => {
   console.log(req.body);
   let transporter = nodemailer.createTransport({
     host: "smtp-mail.outlook.com",
