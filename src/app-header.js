@@ -10,7 +10,7 @@ const AppHeader = () => {
 function HeaderName(props) {
   return (
     <h1 className="mainName link">
-      <a href="/">
+      <a href="/itsme">
         <span className="headerFont H">H</span>
         <span className="headerFont M">M</span>
       </a>
@@ -40,7 +40,11 @@ function ContactLinks(props) {
         </a>
       </li>
       <li>
-        <a href="https://github.com/harshdsdh">
+        <a
+          href="https://github.com/harshdsdh"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <svg
             className="footlink"
             xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +57,11 @@ function ContactLinks(props) {
         </a>
       </li>
       <li>
-        <a href="https://www.linkedin.com/in/harshit-mishra1793/">
+        <a
+          href="https://www.linkedin.com/in/harshit-mishra1793/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <svg
             className="footlink"
             xmlns="http://www.w3.org/2000/svg"

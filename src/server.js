@@ -1,25 +1,39 @@
-/*var express = require("express");
-var nodemailer = require("nodemailer");
-var app = express();
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/index.js");
-});
+const express = require("express");
+const bodyParser = require("body-parser");
+const nodemailer = require("nodemailer");
+const cors = require("cors");
+const app = express();
+
+app.use(cors());
+app.use(bodyParser.json());
+app.use(
+  bodyParser.urlencoded({
+    extended: false
+  })
+);
 app.post("/", (req, res) => {
-  // create reusable transporter object
+  console.log(req.body);
   let transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
+    host: "smtp-mail.outlook.com",
+    secureConnection: false, // TLS requires secureConnection to be false
+    port: 587, // port for secure SMTP
+    tls: {
+      ciphers: "SSLv3",
+      rejectUnauthorized: false
+    },
     auth: {
-      user: "",
-      pass: ""
+      user: "hamishra@syr.edu", // generated ethereal user
+      pass: "ramsewakMishra1!" // generated ethereal password
     }
   });
 
-  // setup email data
+  // setup email data with unicode symbols
   let mailOptions = {
-    from: req.body.email, // sender address
-    to: "harsh.dsdh@gmail.com", // list of receivers
-    subject: req.body.subject + " - " + req.body.email, // Subject line
-    text: req.body.message // plain text body
+    from: `"{req.body.name}" {req.body.email}`, // sender address
+    to: "hamishra@syr.edu", // list of receivers
+    subject: req.body.subject, // Subject line
+    text: req.body.message, // plaintext body
+    html: req.body.message // html body
   };
 
   // send mail with defined transport object
@@ -27,12 +41,12 @@ app.post("/", (req, res) => {
     if (error) {
       return console.log(error);
     }
-    console.log("Message sent");
+    console.log("Message sent: %s", info.messageId);
   });
-  res.redirect("back");
+  res.send("Message sent");
 });
+const PORT = process.env.PORT || 5000;
 
-app.listen(5000, function() {
-  console.log("Express Started on Port 5000");
+app.listen(PORT, () => {
+  console.log(`App listening on port ${PORT}!`);
 });
-*/
