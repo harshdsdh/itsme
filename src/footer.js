@@ -11,7 +11,7 @@ const Footer = () => {
 const handleSubmit = async e => {
   e.preventDefault();
   axios
-    .post("http://localhost:" + PORT, {
+    .post("https://harshdsdh.github.io/itsme/" + PORT, {
       name: document.getElementsByName("name")[0].value,
       email: document.getElementsByName("email")[0].value,
       subject: document.getElementsByName("subject")[0].value,
