@@ -11,7 +11,7 @@ const Footer = () => {
 const handleSubmit = async e => {
   e.preventDefault();
   axios
-    .post("https://localhost:" + PORT, {
+    .post("/", {
       headers: { "Access-Control-Allow-Origin": "*" },
       name: document.getElementsByName("name")[0].value,
       email: document.getElementsByName("email")[0].value,
