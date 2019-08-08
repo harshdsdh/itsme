@@ -11,7 +11,7 @@ const Footer = () => {
 const handleSubmit = async e => {
   e.preventDefault();
   axios
-    .post("/itsme", {
+    .post("http://localhost:" + PORT, {
       name: document.getElementsByName("name")[0].value,
       email: document.getElementsByName("email")[0].value,
       subject: document.getElementsByName("subject")[0].value,
@@ -63,7 +63,7 @@ function FooterContent(props) {
             required
           />
 
-          <button type="submit" class="contact__form__btn" disabled>
+          <button type="submit" class="contact__form__btn">
             Send Message
             <svg
               version="1.1"
