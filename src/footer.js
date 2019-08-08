@@ -64,7 +64,7 @@ function FooterContent(props) {
             required
           />
 
-          <button type="submit" class="contact__form__btn">
+          <button type="submit" class="contact__form__btn" disabled>
             Send Message
             <svg
               version="1.1"
