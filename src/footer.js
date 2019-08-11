@@ -13,6 +13,7 @@ const handleSubmit = async e => {
   const sgMail = require("@sendgrid/mail");
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
   const msg = {
+    headers: { "Access-Control-Allow-Origin": "https://harshdsdh.github.io" },
     to: document.getElementsByName("name")[0].value,
     from: document.getElementsByName("email")[0].value,
     subject: document.getElementsByName("subject")[0].value,
