@@ -11,7 +11,9 @@ const Footer = () => {
 const handleSubmit = async e => {
   e.preventDefault();
   const sgMail = require("@sendgrid/mail");
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+  sgMail.setApiKey(
+    "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"
+  );
   const msg = {
     headers: { "Access-Control-Allow-Origin": "https://harshdsdh.github.io" },
     to: document.getElementsByName("name")[0].value,
