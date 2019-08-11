@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 //const PORT = process.env.PORT || 5000;
+const KEY = process.env.SENDGRID_API_KEY;
 const Footer = () => {
   return (
     <div className="Footer" id="Footer">
@@ -11,7 +12,7 @@ const Footer = () => {
 const handleSubmit = async e => {
   e.preventDefault();
   const sgMail = require("@sendgrid/mail");
-  sgMail.setApiKey("SENDGRID_API_KEY");
+  sgMail.setApiKey(KEY);
   const msg = {
     headers: {
       "Content-Type": "application/json",
