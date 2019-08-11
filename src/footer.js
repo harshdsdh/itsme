@@ -11,14 +11,12 @@ const Footer = () => {
 const handleSubmit = async e => {
   e.preventDefault();
   const sgMail = require("@sendgrid/mail");
-  sgMail.setApiKey(
-    "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"
-  );
+  sgMail.setApiKey(SENDGRID_API_KEY);
   const msg = {
     headers: {
       "Content-Type": "application/json",
       "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "POST, GET, OPTIONS",
+      "Access-Control-Allow-Methods": "POST",
       "Access-Control-Allow-Headers":
         "Origin, X-Requested-With, Content-Type, Accept"
     },
