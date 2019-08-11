@@ -11,7 +11,7 @@ const Footer = () => {
 const handleSubmit = async e => {
   e.preventDefault();
   const sgMail = require("@sendgrid/mail");
-  sgMail.setApiKey(SENDGRID_API_KEY);
+  sgMail.setApiKey("SENDGRID_API_KEY");
   const msg = {
     headers: {
       "Content-Type": "application/json",
