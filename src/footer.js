@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-const PORT = process.env.PORT || 5000;
+//const PORT = process.env.PORT || 5000;
 const Footer = () => {
   return (
     <div className="Footer" id="Footer">
@@ -10,6 +10,20 @@ const Footer = () => {
 };
 const handleSubmit = async e => {
   e.preventDefault();
+  const sgMail = require("@sendgrid/mail");
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+  const msg = {
+    to: document.getElementsByName("name")[0].value,
+    from: document.getElementsByName("email")[0].value,
+    subject: document.getElementsByName("subject")[0].value,
+    text: document.getElementsByName("message")[0].value,
+    html: document.getElementsByName("message")[0].value
+  };
+  sgMail.send(msg, { mode: "no-cors" }).then(sent => {
+    console.log(sent);
+    // Awesome Logic to check if mail was sent
+  });
+  /*
   axios
     .post("/", {
       headers: { "Access-Control-Allow-Origin": "*" },
@@ -27,7 +41,7 @@ const handleSubmit = async e => {
     })
     .catch(function(error) {
       console.log(error);
-    });
+    });*/
 };
 function FooterContent(props) {
   return (
@@ -64,7 +78,7 @@ function FooterContent(props) {
             required
           />
 
-          <button type="submit" class="contact__form__btn" disabled>
+          <button type="submit" class="contact__form__btn">
             Send Message
             <svg
               version="1.1"
