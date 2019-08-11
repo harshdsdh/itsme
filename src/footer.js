@@ -15,7 +15,13 @@ const handleSubmit = async e => {
     "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"
   );
   const msg = {
-    headers: { "Access-Control-Allow-Origin": "https://harshdsdh.github.io" },
+    headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "POST, GET, OPTIONS",
+      "Access-Control-Allow-Headers":
+        "Origin, X-Requested-With, Content-Type, Accept"
+    },
     to: document.getElementsByName("name")[0].value,
     from: document.getElementsByName("email")[0].value,
     subject: document.getElementsByName("subject")[0].value,
