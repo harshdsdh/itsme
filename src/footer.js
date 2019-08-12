@@ -11,27 +11,6 @@ const Footer = () => {
 };
 const handleSubmit = async e => {
   e.preventDefault();
-  const sgMail = require("@sendgrid/mail");
-  sgMail.setApiKey(KEY);
-  const msg = {
-    headers: {
-      "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "POST",
-      "Access-Control-Allow-Headers":
-        "Origin, X-Requested-With, Content-Type, Accept"
-    },
-    to: document.getElementsByName("name")[0].value,
-    from: document.getElementsByName("email")[0].value,
-    subject: document.getElementsByName("subject")[0].value,
-    text: document.getElementsByName("message")[0].value,
-    html: document.getElementsByName("message")[0].value
-  };
-  sgMail.send(msg, { mode: "no-cors" }).then(sent => {
-    console.log(sent);
-    // Awesome Logic to check if mail was sent
-  });
-  /*
   axios
     .post("/", {
       headers: { "Access-Control-Allow-Origin": "*" },
@@ -49,7 +28,7 @@ const handleSubmit = async e => {
     })
     .catch(function(error) {
       console.log(error);
-    });*/
+    });
 };
 function FooterContent(props) {
   return (

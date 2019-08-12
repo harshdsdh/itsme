@@ -1,9 +1,15 @@
 const express = require("express");
+const app = express();
+const path = require("path");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
-const app = express();
+const router = express.Router();
 
+router.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname + "/index.html"));
+  //__dirname : It will resolve to your project folder.
+});
 app.use(cors());
 app.use(bodyParser.json());
 app.use(
@@ -45,8 +51,7 @@ app.post("/", (req, res) => {
   });
   res.send("Message sent");
 });
-const PORT = process.env.PORT || 5000;
+app.use("/", router);
+app.listen(process.env.port || 4000);
 
-app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}!`);
-});
+console.log("Running at Port 4000");
