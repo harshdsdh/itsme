@@ -17,7 +17,7 @@ app.use(
     extended: false
   })
 );
-app.post("https://harshdsdh.github.io/itsme/", (req, res) => {
+app.post("/", (req, res) => {
   console.log(req.body);
   let transporter = nodemailer.createTransport({
     host: "smtp-mail.outlook.com",
