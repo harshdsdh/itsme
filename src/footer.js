@@ -12,7 +12,7 @@ const Footer = () => {
 const handleSubmit = async e => {
   e.preventDefault();
   axios
-    .post("http://localhost:4000/", {
+    .post("https://usebasin.com/f/eb2ce427c511", {
       headers: { "Access-Control-Allow-Origin": "*" },
       name: document.getElementsByName("name")[0].value,
       email: document.getElementsByName("email")[0].value,
