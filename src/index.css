@@ -98,7 +98,10 @@ section {
   padding: 0px 0px;
 }
 .footerLinks li img {
-  padding: 0px 5px;
+  padding: 0 px 5px;
+}
+.projlist li {
+  border: 1px solid yellow;
 }
 .projects {
   display: flex;
@@ -125,6 +128,7 @@ section {
   flex-flow: row wrap;
   justify-content: space-around;
 }
+
 /*
 
 #321b6c*/

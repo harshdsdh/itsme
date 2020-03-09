@@ -12,9 +12,9 @@ function MainContent(props) {
       <h1 className="first">
         Harshit Mishra
         <br />
-        <span className="second">Web Developer</span>
+        <span className="second">Software Developer</span>
       </h1>
-      <p className="content-text">Full-Stack Web Development</p>
+      <p className="content-text">Machine Learning Engineer</p>
     </div>
   );
 }

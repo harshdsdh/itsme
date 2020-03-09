@@ -1,4 +1,5 @@
 import React from "react";
+import mnist_gif from "../src/pics/mngif.gif";
 const Projects = () => {
   return (
     <div
@@ -25,100 +26,52 @@ function ProjectContent(props) {
     <div>
       <ul className="projlist">
         <li>
-          Designed a{" "}
-          <a
-            href="https://harshdsdh.github.io/adopt-me/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Pet adoption
-          </a>{" "}
-          app in React.
+          <img src={mnist_gif}></img>
+          <p>
+            <a href="https://colab.research.google.com/drive/1CvRtXCAxxgAvhX0yXVoBRXt3QXIazxM9">
+              over 98% Accuracy with MNIST Datset
+            </a>
+          </p>
         </li>
         <li>
-          Designed my{" "}
-          <a
-            href="https://harshdsdh.github.io/itsme/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Portfolio
-          </a>{" "}
-          in React.
+          <img src={mnist_gif}></img>
+          <p>
+            <a href="https://colab.research.google.com/drive/1CvRtXCAxxgAvhX0yXVoBRXt3QXIazxM9">
+              over 98% Accuracy with MNIST Datset
+            </a>
+          </p>
         </li>
         <li>
-          Developed a MERN stack{" "}
-          <a
-            href="https://harshdsdh.github.io/my-app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Todo list
-          </a>{" "}
-          app. used expressjs to create my own nodejs server and mongo db to
-          connect to a remote database
+          <img src={mnist_gif}></img>
+          <p>
+            <a href="https://colab.research.google.com/drive/1CvRtXCAxxgAvhX0yXVoBRXt3QXIazxM9">
+              over 98% Accuracy with MNIST Datset
+            </a>
+          </p>
         </li>
         <li>
-          Developed a MERN stack to undertand react hooks{" "}
-          <a
-            href="https://harshdsdh.github.io/react-hooks/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            react-hooks
-          </a>{" "}
-          app. used expressjs to create my own nodejs server and mongo db to
-          connect to a remote database.
+          <img src={mnist_gif}></img>
+          <p>
+            <a href="https://colab.research.google.com/drive/1CvRtXCAxxgAvhX0yXVoBRXt3QXIazxM9">
+              over 98% Accuracy with MNIST Datset
+            </a>
+          </p>
         </li>
         <li>
-          See the Pen{" "}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://codepen.io/harshdsdh/pen/XLNPpN/"
-          >
-            Rude calculator
-          </a>{" "}
-          by Harshit Mishra (
-          <a
-            href="https://codepen.io/harshdsdh"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @harshdsdh
-          </a>
-          ) on{" "}
-          <a
-            href="https://codepen.io"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            CodePen
-          </a>
+          <img src={mnist_gif}></img>
+          <p>
+            <a href="https://colab.research.google.com/drive/1CvRtXCAxxgAvhX0yXVoBRXt3QXIazxM9">
+              over 98% Accuracy with MNIST Datset
+            </a>
+          </p>
         </li>
         <li>
-          Developed a python script to mine twitter data from multiple twitter
-          handles and make wordclouds of most frequently used words to asses
-          what they are tweeting about -{" "}
-          <a
-            href="https://github.com/harshdsdh/wordcloud_chats_politics/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            wordcloud_chats_politics
-          </a>
-        </li>
-        <li>
-          Developed a python script to mine twitter data from multiple twitter
-          handles and trending topics to analyze the view points of presidential
-          nominees -{" "}
-          <a
-            href="https://github.com/harshdsdh/electionsOnTwitter"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            electionsOnTwitter
-          </a>
+          <img src={mnist_gif}></img>
+          <p>
+            <a href="https://colab.research.google.com/drive/1CvRtXCAxxgAvhX0yXVoBRXt3QXIazxM9">
+              over 98% Accuracy with MNIST Datset
+            </a>
+          </p>
         </li>
       </ul>
     </div>

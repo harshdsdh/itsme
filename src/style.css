@@ -273,9 +273,20 @@ body {
   font-weight: 300px;
   word-spacing: 5px;
 }
-.projlist li {
-  list-style: circle;
+.projlist {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
+.projlist li {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  width: 33%;
+  height: 40%;
+  align-items: center;
+}
+
 .projlist a {
   color: grey;
 }
@@ -354,7 +365,7 @@ body {
     width: 50%;
   }
   .projects {
-    min-height: 80vh;
+    min-height: auto;
     padding: 0% 0%;
     display: flex;
     flex-direction: column;
@@ -428,8 +439,7 @@ body {
     width: 50%;
   }
   .projects {
-    min-height: 80vh;
-    padding: 0% 0%;
+    min-height: auto;
     display: flex;
     flex-direction: column;
     background-color: black;
@@ -444,6 +454,11 @@ body {
     font-size: 0.8rem;
     font-weight: 300px;
     word-spacing: 3px;
+  }
+  .projlist {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
   .contact {
     padding: 2rem 0;
