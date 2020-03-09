@@ -38,7 +38,7 @@ function ProjectContent(props) {
           <img src={ann_gif}></img>
           <p>
             <a href="https://colab.research.google.com/drive/1MBIbDA6x8iHcs4DsfKKu8Wh9nJsihY6K#scrollTo=aDyGj8DmXCJI">
-              Genrative Deep Learning wuth different neural nets
+              Genrative Deep Learning using different neural nets
             </a>
           </p>
         </li>
